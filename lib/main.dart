@@ -64,7 +64,7 @@ class _MyInputState extends State<MyInput> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test'),
+        title: Text('Whatsapp to Telegram'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
