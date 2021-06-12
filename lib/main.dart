@@ -48,7 +48,6 @@ class _MyInputState extends State<MyInput> {
     text = text.replaceAll('_', '__');
     text = text.replaceAll('*', '**');
     text = text.replaceAll('~', '~~');
-    text = text.replaceAll('*', '**');
     return text;
   }
 
