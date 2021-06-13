@@ -65,7 +65,7 @@ class _MyInputState extends State<MyInput> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('WhatsApp Markdown to Telegram Markdown')),
+        title: Center(child: Text('Tes')),
         toolbarHeight: 100,
       ),
       body: Padding(
