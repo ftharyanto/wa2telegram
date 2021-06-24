@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -90,6 +91,14 @@ class _MyInputState extends State<MyInput> {
                 child: ElevatedButton(
                   onPressed: _copyToClipboard,
                   child: Text('Copy'),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                child: InkWell(
+                  child: Text('Source Code'),
+                  onTap: () =>
+                      launch('https://github.com/ftharyanto/wa2telegram'),
                 ),
               ),
             ],
