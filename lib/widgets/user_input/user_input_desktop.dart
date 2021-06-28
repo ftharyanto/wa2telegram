@@ -32,8 +32,7 @@ class _UserInputDesktopState extends State<UserInputDesktop> {
     await Clipboard.setData(ClipboardData(text: myController2.text));
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text('Copied to clipboard'),
-      behavior: SnackBarBehavior.floating,
-      width: 280,
+      behavior: SnackBarBehavior.fixed,
     ));
   }
 
@@ -50,7 +49,7 @@ class _UserInputDesktopState extends State<UserInputDesktop> {
                   fillColor: Colors.white,
                   focusedBorder: OutlineInputBorder(
                     borderSide:
-                        const BorderSide(color: Colors.black26, width: 2.0),
+                        const BorderSide(color: Colors.blue, width: 2.0),
                     borderRadius: BorderRadius.circular(25.0),
                   ),
                 ),
@@ -69,7 +68,7 @@ class _UserInputDesktopState extends State<UserInputDesktop> {
                   fillColor: Colors.white,
                   focusedBorder: OutlineInputBorder(
                     borderSide:
-                        const BorderSide(color: Colors.black26, width: 2.0),
+                        const BorderSide(color: Colors.blue, width: 2.0),
                     borderRadius: BorderRadius.circular(25.0),
                   ),
                 ),

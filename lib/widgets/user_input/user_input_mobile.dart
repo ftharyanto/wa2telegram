@@ -32,8 +32,7 @@ class _UserInputMobileState extends State<UserInputMobile> {
     await Clipboard.setData(ClipboardData(text: myController2.text));
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text('Copied to clipboard'),
-      behavior: SnackBarBehavior.floating,
-      width: 280,
+      behavior: SnackBarBehavior.fixed,
     ));
   }
 
@@ -41,46 +40,36 @@ class _UserInputMobileState extends State<UserInputMobile> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Column(
-          children: [
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'Whatsapp',
-                  fillColor: Colors.white,
-                  focusedBorder: OutlineInputBorder(
-                    borderSide:
-                        const BorderSide(color: Colors.black26, width: 2.0),
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                ),
-                controller: myController,
-                keyboardType: TextInputType.multiline,
-                maxLines: 3,
-                onChanged: (value) =>
-                    myController2.text = convertToTelegram(myController.text),
-              ),
+        TextField(
+          decoration: InputDecoration(
+            labelText: 'Whatsapp',
+            fillColor: Colors.white,
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.blue, width: 2.0),
+              borderRadius: BorderRadius.circular(25.0),
             ),
-            SizedBox(width: 60),
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'Telegram',
-                  fillColor: Colors.white,
-                  focusedBorder: OutlineInputBorder(
-                    borderSide:
-                        const BorderSide(color: Colors.black26, width: 2.0),
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                ),
-                controller: myController2,
-                keyboardType: TextInputType.multiline,
-                maxLines: 3,
-              ),
-            ),
-          ],
+          ),
+          controller: myController,
+          keyboardType: TextInputType.multiline,
+          maxLines: 10,
+          onChanged: (value) =>
+              myController2.text = convertToTelegram(myController.text),
         ),
-        SizedBox(height: 2),
+        SizedBox(height: 60),
+        TextField(
+          decoration: InputDecoration(
+            labelText: 'Telegram',
+            fillColor: Colors.white,
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.blue, width: 2.0),
+              borderRadius: BorderRadius.circular(25.0),
+            ),
+          ),
+          controller: myController2,
+          keyboardType: TextInputType.multiline,
+          maxLines: 10,
+        ),
+        SizedBox(height: 20),
         ElevatedButton(
           onPressed: _copyToClipboard,
           child: Text('Copy'),
