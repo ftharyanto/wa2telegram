@@ -14,5 +14,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// Define a custom Form widget.
