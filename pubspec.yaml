@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  get_it: ^4.0.2
   responsive_builder: ^0.4.1
   url_launcher: ^6.0.7
 
@@ -58,10 +59,8 @@ flutter:
           weight: 800
         - asset: assets/fonts/OpenSans-Regular.ttf
           weight: 400
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
 flutter_icons:
   android: true
   ios: true

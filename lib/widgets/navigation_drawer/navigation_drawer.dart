@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wa2telegram/routing/route_names.dart';
 
 import 'drawer_item.dart';
 
@@ -17,7 +18,8 @@ class NavigationDrawer extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          DrawerItem('About', Icons.help),
+          DrawerItem('Home', Icons.home, HomeRoute),
+          DrawerItem('About', Icons.help, AboutRoute),
         ],
       ),
     );

@@ -12,5 +12,3 @@ class NavBarLogo extends StatelessWidget {
     );
   }
 }
-
-// TODO: relative import does not work

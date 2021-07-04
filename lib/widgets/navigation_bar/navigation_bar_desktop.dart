@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wa2telegram/routing/route_names.dart';
 
 import 'navbar_item.dart';
 import 'navbar_logo.dart';
@@ -17,7 +18,9 @@ class NavigationBarTabletDesktop extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              NavBarItem('About'),
+              NavBarItem('Home', HomeRoute),
+              SizedBox(width: 60),
+              NavBarItem('About', AboutRoute),
             ],
           )
         ],
